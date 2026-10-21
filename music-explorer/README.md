@@ -30,5 +30,3 @@ pnpm start
 ```
 `pnpm start` serves the built app and API from Express on http://localhost:3001. Run `pnpm build` first.
 
-## Design notes
-The server requests up to 50 results per Apple entity, normalises and merges them, and the client displays them in batches of 10. This is client-side pagination: scrolling does not make another Apple request. The approach is suitable for this bounded assignment; very large result sets would benefit from server-side pagination where supported. For production, consider rate limiting, caching, API timeouts and monitoring.
