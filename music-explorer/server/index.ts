@@ -87,7 +87,7 @@ app.get("/api/search", async (req: Request, res: Response) => {
         url.searchParams.set("term", term);
         url.searchParams.set("media", "music");
         url.searchParams.set("entity", entity);
-        url.searchParams.set("limit", "50");
+        url.searchParams.set("limit", "10000");
         const response = await fetch(url, {
           signal: AbortSignal.timeout(10000),
         });
